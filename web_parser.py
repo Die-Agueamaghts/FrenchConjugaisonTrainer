@@ -218,6 +218,43 @@ def save_js(path, data):
         f.write(f"window.verbDaten = {json_text};")
 
 
+def sync_verbs_js(path, verbs):
+    existing_entries = []
+    if os.path.exists(path):
+        with open(path, encoding="utf-8") as f:
+            content = f.read()
+        matches = re.findall(r"\{\s*id:\s*'([^']+)'\s*,\s*label:\s*'([^']*)'\s*\}", content)
+        existing_entries = [entry[0] for entry in matches]
+
+    normalized_existing = {canonical_verb(verb): verb for verb in existing_entries}
+    normalized_requested = [canonical_verb(verb) for verb in verbs]
+
+    merged = []
+    for verb in existing_entries:
+        merged.append(verb)
+
+    for verb in verbs:
+        key = canonical_verb(verb)
+        if key not in normalized_existing:
+            merged.append(verb)
+
+    merged = unique_verbs(merged)
+    merged = sort_verbs(merged)
+
+    lines = ["export const verbs = ["]
+    for verb in merged:
+        label = verb
+        if verb == "etre":
+            label = "être"
+        elif verb == "etre":
+            label = "être"
+        lines.append(f"    {{ id: '{verb}', label: '{label}' }},")
+    lines.append("];")
+
+    with open(path, "w", encoding="utf-8") as f:
+        f.write("\n".join(lines) + "\n")
+
+
 def normalize_filename(name: str) -> str:
     normalized = unicodedata.normalize("NFKD", name)
     normalized = normalized.encode("ascii", "ignore").decode("ascii")
@@ -295,6 +332,11 @@ def main():
     existing_keys = {canonical_verb(verb) for verb in existing_verbs}
     new_verbs = [verb for verb in verbs if canonical_verb(verb) not in existing_keys]
     save_verbs_file(verbs_file, verbs)
+
+    verbs_js_path = os.path.abspath(os.path.join(script_dir, "js", "verbs.js"))
+    if os.path.exists(verbs_js_path):
+        sync_verbs_js(verbs_js_path, verbs)
+        print(f"Verb-Liste aktualisiert: {verbs_js_path}")
     if verbs_file_exists:
         print(f"Verbdatei aktualisiert: {verbs_file}")
     else:
