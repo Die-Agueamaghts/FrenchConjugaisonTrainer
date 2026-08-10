@@ -1,0 +1,10 @@
+aller
+avoir
+devoir
+dire
+être
+faire
+pouvoir
+savoir
+voir
+vouloir
