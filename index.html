@@ -112,6 +112,10 @@
             background: #fff;
             color: var(--primary);
         }
+
+        select:focus {
+            overflow: visible;
+        }
         .info-row {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -409,19 +413,9 @@
 
     <div class="grid" id="conjugation-grid"></div>
 
+    <script src="./js/verbs.js"></script>
     <script>
-        const verbs = [
-            { id: 'aller', label: 'aller' },
-            { id: 'avoir', label: 'avoir' },
-            { id: 'devoir', label: 'devoir' },
-            { id: 'dire', label: 'dire' },
-            { id: 'etre', label: 'être' },
-            { id: 'faire', label: 'faire' },
-            { id: 'pouvoir', label: 'pouvoir' },
-            { id: 'savoir', label: 'savoir' },
-            { id: 'voir', label: 'voir' },
-            { id: 'vouloir', label: 'vouloir' },
-        ];
+        const verbs = window.verbs || [];
 
         const verbSelect = document.getElementById('verb-select');
         const errorMsg = document.getElementById('error-msg');
@@ -925,6 +919,14 @@
         function initialize() {
             verbs.forEach(verb => verbSelect.appendChild(createOption(verb)));
             verbSelect.value = 'etre';
+            verbSelect.addEventListener('mousedown', () => {
+                verbSelect.size = 10;
+                verbSelect.style.overflowY = 'auto';
+            });
+            verbSelect.addEventListener('blur', () => {
+                verbSelect.size = 1;
+                verbSelect.style.overflowY = 'visible';
+            });
             verbSelect.addEventListener('change', () => {
                 setVerb(verbSelect.value);
             });
