@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Französisch Verb-Konjugator</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --accent: #3498db;
+            --bg: #f8f9fa;
+            --card-bg: #ffffff;
+            --border: #dce3ea;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg);
+            color: var(--primary);
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 24px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+        h1 {
+            margin: 0;
+            font-size: clamp(2rem, 2.5vw, 3rem);
+            color: var(--primary);
+        }
+        .subtitle {
+            color: #7f8c8d;
+            margin: 8px 0 22px;
+        }
+        .toolbar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 18px;
+        }
+        .quickstart,
+        .subbuttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+        .quickstart label,
+        .subbuttons label {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            border: 1px solid var(--border);
+            background: #fff;
+            color: var(--primary);
+            padding: 6px 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 0.92rem;
+        }
+
+        .mode-label.mode-alle { background: #f0f4ff; border-color: #d6e3ff; }
+        .mode-label.mode-indicatif { background: #e8f5ff; border-color: #b8dcff; }
+        .mode-label.mode-subjonctif { background: #f4e8ff; border-color: #ddb8ff; }
+        .mode-label.mode-conditionnel { background: #e8fff1; border-color: #b8ffd3; }
+        .mode-label.mode-imperatif { background: #fff7e8; border-color: #ffe1b8; }
+        .mode-label.mode-participe { background: #e8fff9; border-color: #b8fff1; }
+
+        .subbuttons label[data-tense="alle"] { background: #f0f4ff; border-color: #d6e3ff; }
+        .subbuttons label[data-tense="Indicatif"] { background: #e8f5ff; border-color: #b8dcff; }
+        .subbuttons label[data-tense="Subjonctif"] { background: #f4e8ff; border-color: #ddb8ff; }
+        .subbuttons label[data-tense="Conditionnel"] { background: #e8fff1; border-color: #b8ffd3; }
+        .subbuttons label[data-tense="Impératif"] { background: #fff7e8; border-color: #ffe1b8; }
+        .subbuttons label[data-tense="Participe"] { background: #e8fff9; border-color: #b8fff1; }
+        .quickstart input[type="checkbox"],
+        .subbuttons input[type="checkbox"] {
+            width: 16px;
+            height: 16px;
+            accent-color: var(--accent);
+        }
+        .quickstart label:hover,
+        .subbuttons label:hover {
+            border-color: var(--accent);
+            background: rgba(52, 152, 219, 0.08);
+        }
+        .quickstart label:has(input[type="checkbox"]:checked),
+        .subbuttons label:has(input[type="checkbox"]:checked) {
+            background: rgba(52, 152, 219, 0.16);
+            border-color: #3498db;
+            color: #2c3e50;
+            box-shadow: 0 0 0 1px rgba(52, 152, 219, 0.3);
+        }
+        .quickstart input[type="checkbox"]:checked + span,
+        .subbuttons input[type="checkbox"]:checked + span {
+            color: var(--accent);
+            font-weight: 700;
+        }
+        label {
+            font-weight: 600;
+            color: var(--primary);
+        }
+        select {
+            min-width: 200px;
+            padding: 10px 12px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: #fff;
+            color: var(--primary);
+        }
+        .info-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 12px;
+            margin-bottom: 18px;
+        }
+        .info-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 14px 16px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+        }
+        .info-card strong {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--accent);
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            overflow: hidden;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            overflow: hidden;
+        }
+        tr + tr td {
+            border-top: 1px solid #edf2f7;
+        }
+        td {
+            padding: 10px 0;
+            font-size: 0.97rem;
+        }
+        .card table {
+            width: 100%;
+            margin-bottom: 20px;
+            border-collapse: separate;
+            border-spacing: 0;
+            overflow: hidden;
+            border: 1px solid rgba(44, 62, 80, 0.08);
+            border-radius: 14px;
+            background: #ffffff;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+        }
+        .card table tbody {
+            border-top: 1px solid rgba(44, 62, 80, 0.08);
+        }
+        .card table tr {
+            transition: background 0.2s ease;
+        }
+        .card table tr:hover {
+            background: rgba(52, 152, 219, 0.05);
+        }
+        .card table tr + tr td {
+            border-top: 1px solid rgba(44, 62, 80, 0.08);
+        }
+        .card table td {
+            padding: 12px 14px;
+            white-space: normal;
+        }
+        .card table + table {
+            margin-top: 16px;
+        }
+        .tense-heading td {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            padding: 14px 16px;
+            font-weight: 700;
+            color: #34495e;
+            background: #f5f8fb;
+            border-bottom: 1px solid rgba(52, 73, 94, 0.12);
+        }
+        .tense-heading td .tts-controls {
+            display: inline-flex;
+            gap: 8px;
+        }
+        .tense-heading td .tts-button {
+            flex-shrink: 0;
+            width: 32px;
+            height: 32px;
+            border-radius: 999px;
+            border: none;
+            color: #fff;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: transform 0.2s ease, background 0.2s ease;
+            font-size: 0.95rem;
+        }
+        .tense-heading td .play-button {
+            background: #2ecc71;
+        }
+        .tense-heading td .play-button:hover {
+            transform: scale(1.05);
+            background: #28b86a;
+        }
+        .tense-heading td .pause-button {
+            background: #f1c40f;
+        }
+        .tense-heading td .pause-button:hover {
+            transform: scale(1.05);
+            background: #d9b30a;
+        }
+        .tense-heading td .stop-button {
+            background: #e74c3c;
+        }
+        .tense-heading td .stop-button:hover {
+            transform: scale(1.05);
+            background: #cf4336;
+        }
+        .tense-heading td .tts-button:focus-visible {
+            outline: 2px solid rgba(0,0,0,0.2);
+            outline-offset: 2px;
+        }
+        .tense-heading.tense-present td,
+        .tense-heading.tense-present-simple td,
+        .tense-heading.tense-pr%C3%A9sent td {
+            background: #e8f5ff;
+        }
+        .tense-heading.tense-passe-compose td,
+        .tense-heading.tense-passe-composé td,
+        .tense-heading.tense-passe-composee td {
+            background: #f5e8ff;
+        }
+        .tense-heading.tense-imparfait td {
+            background: #e8fff1;
+        }
+        .tense-heading.tense-plus-que-parfait td {
+            background: #fff7e8;
+        }
+        .tense-heading.tense-futur-simple td,
+        .tense-heading.tense-futur td {
+            background: #fff3e0;
+        }
+        .tense-heading.tense-conditionnel-present td,
+        .tense-heading.tense-conditionnel td {
+            background: #e8fff9;
+        }
+        .tense-heading.tense-subjonctif-present td,
+        .tense-heading.tense-subjonctif td {
+            background: #fff0f8;
+        }
+        .tense-heading.tense-imperatif-present td,
+        .tense-heading.tense-imperatif td {
+            background: #fff4e4;
+        }
+        .tense-heading.tense-participe-present td,
+        .tense-heading.tense-participe-passe td,
+        .tense-heading.tense-participe td {
+            background: #eefaf7;
+        }
+        @media (max-width: 800px) {
+            body {
+                padding: 16px;
+            }
+            .toolbar {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            select {
+                width: 100%;
+            }
+            .quickstart,
+            .subbuttons {
+                justify-content: flex-start;
+            }
+            .info-row {
+                grid-template-columns: 1fr;
+            }
+        }
+        .card {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--accent);
+        }
+        .card[data-mode="Indicatif"] {
+            background: #e8f6ff;
+            border-top-color: #3498db;
+        }
+        .card[data-mode="Subjonctif"] {
+            background: #f5e8ff;
+            border-top-color: #9b59b6;
+        }
+        .card[data-mode="Conditionnel"] {
+            background: #e8fff4;
+            border-top-color: #1abc9c;
+        }
+        .card[data-mode="Impératif"] {
+            background: #fff8e8;
+            border-top-color: #f39c12;
+        }
+        .card[data-mode="Participe"] {
+            background: #e8fff8;
+            border-top-color: #16a085;
+        }
+        .card[data-mode="Indicatif"] .tense-heading td {
+            background: #d6eafc;
+        }
+        .card[data-mode="Subjonctif"] .tense-heading td {
+            background: #e7d1ff;
+        }
+        .card[data-mode="Conditionnel"] .tense-heading td {
+            background: #d0ffe6;
+        }
+        .card[data-mode="Impératif"] .tense-heading td {
+            background: #ffe6cc;
+        }
+        .card[data-mode="Participe"] .tense-heading td {
+            background: #ccfbf1;
+        }
+        .card h3 {
+            margin-top: 0;
+            margin-bottom: 16px;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        tr + tr td {
+            border-top: 1px solid #edf2f7;
+        }
+        td {
+            padding: 10px 0;
+            font-size: 0.97rem;
+        }
+        .pronoun {
+            font-weight: 700;
+            color: #34495e;
+            width: 38%;
+        }
+        .verb-form {
+            color: #2c3e50;
+        }
+        #error-msg {
+            color: #e74c3c;
+            text-align: center;
+            font-weight: bold;
+            display: none;
+            margin-bottom: 16px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="verb-title">Französisch Verb-Konjugator</h1>
+    </header>
+
+    <div class="toolbar">
+        <label for="verb-select">Verb wählen:</label>
+        <select id="verb-select" aria-label="Verb auswählen"></select>
+    </div>
+
+    <div class="quickstart" aria-label="Modus-Auswahl">
+        <label class="mode-label mode-alle"><input type="checkbox" data-mode="alle" checked> Alle</label>
+        <label class="mode-label mode-indicatif"><input type="checkbox" data-mode="Indicatif"> Indicatif</label>
+        <label class="mode-label mode-subjonctif"><input type="checkbox" data-mode="Subjonctif"> Subjonctif</label>
+        <label class="mode-label mode-conditionnel"><input type="checkbox" data-mode="Conditionnel"> Conditionnel</label>
+        <label class="mode-label mode-imperatif"><input type="checkbox" data-mode="Impératif"> Impératif</label>
+        <label class="mode-label mode-participe"><input type="checkbox" data-mode="Participe"> Participe</label>
+    </div>
+    <div class="subbuttons" id="tense-buttons" aria-label="Zeitform-Auswahl"></div>
+
+    <div id="error-msg"></div>
+    <div id="loading-indicator" class="info-card" style="display:none; text-align:center;">
+        <strong>Lädt…</strong>
+        <div>Die Konjugation wird geladen, bitte warten.</div>
+    </div>
+
+    <div class="info-row">
+        <div class="info-card">
+            <strong>Infinitif</strong>
+            <div id="verb-infinitiv">–</div>
+        </div>
+        <div class="info-card">
+            <strong>Auxiliaire</strong>
+            <div id="verb-auxiliaire">–</div>
+        </div>
+        <div class="info-card">
+            <strong>Groupe</strong>
+            <div id="verb-groupe">–</div>
+        </div>
+    </div>
+
+    <div class="grid" id="conjugation-grid"></div>
+
+    <script>
+        const verbs = [
+            { id: 'aller', label: 'aller' },
+            { id: 'avoir', label: 'avoir' },
+            { id: 'devoir', label: 'devoir' },
+            { id: 'dire', label: 'dire' },
+            { id: 'etre', label: 'être' },
+            { id: 'faire', label: 'faire' },
+            { id: 'pouvoir', label: 'pouvoir' },
+            { id: 'savoir', label: 'savoir' },
+            { id: 'voir', label: 'voir' },
+            { id: 'vouloir', label: 'vouloir' },
+        ];
+
+        const verbSelect = document.getElementById('verb-select');
+        const errorMsg = document.getElementById('error-msg');
+        const grid = document.getElementById('conjugation-grid');
+        const tenseButtons = document.getElementById('tense-buttons');
+        let activeModeFilter = 'alle';
+        let currentVerbData = null;
+        let selectedModeFilters = ['alle'];
+        let selectedTenseFilters = ['alle'];
+
+        function restoreModeCheckboxes() {
+            const modeInputs = Array.from(document.querySelectorAll('.quickstart input[type="checkbox"]'));
+            const useAll = selectedModeFilters.includes('alle');
+            modeInputs.forEach(input => {
+                input.checked = useAll ? input.dataset.mode === 'alle' : selectedModeFilters.includes(input.dataset.mode);
+            });
+        }
+
+        function restoreTenseCheckboxes() {
+            const tenseInputs = Array.from(document.querySelectorAll('#tense-buttons input[type="checkbox"]'));
+            if (tenseInputs.length === 0) {
+                return;
+            }
+            const useAll = selectedTenseFilters.includes('alle');
+            tenseInputs.forEach(input => {
+                if (input.dataset.tense === 'alle') {
+                    input.checked = useAll;
+                } else {
+                    input.checked = useAll ? false : selectedTenseFilters.includes(input.dataset.tense);
+                }
+            });
+        }
+
+        function createOption(verb) {
+            const option = document.createElement('option');
+            option.value = verb.id;
+            option.textContent = verb.label;
+            return option;
+        }
+
+        function loadVerbData(verbId) {
+            const url = `./js/${verbId}.js`;
+            errorMsg.style.display = 'none';
+            grid.innerHTML = '';
+            document.getElementById('verb-infinitiv').textContent = 'Lade...';
+            document.getElementById('verb-auxiliaire').textContent = '...';
+            document.getElementById('verb-groupe').textContent = '...';
+
+            return fetch(url)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`Ladefehler: ${response.status} für ${url}`);
+                    }
+                    return response.text();
+                })
+                .then(text => {
+                    const jsonText = text
+                        .replace(/^\s*(?:const\s+verbDaten|window\.verbDaten)\s*=\s*/i, '')
+                        .replace(/;\s*$/, '');
+                    try {
+                        return JSON.parse(jsonText);
+                    } catch (err) {
+                        throw new Error('Fehler beim Parsen der JS-Datei');
+                    }
+                })
+                .catch(fetchErr => {
+                    return loadVerbDataByScript(url).catch(scriptErr => {
+                        throw new Error(`${fetchErr.message}; ${scriptErr.message}`);
+                    });
+                });
+        }
+
+        function loadVerbDataByScript(url) {
+            return new Promise((resolve, reject) => {
+                const existingData = window.verbDaten;
+                if (existingData !== undefined) {
+                    delete window.verbDaten;
+                }
+
+                const script = document.createElement('script');
+                script.src = url;
+                script.onload = () => {
+                    const data = window.verbDaten;
+                    script.remove();
+                    if (existingData !== undefined) {
+                        window.verbDaten = existingData;
+                    } else {
+                        delete window.verbDaten;
+                    }
+                    if (data) {
+                        resolve(data);
+                    } else {
+                        reject(new Error(`Keine Daten in ${url}.`));
+                    }
+                };
+                script.onerror = () => {
+                    script.remove();
+                    if (existingData !== undefined) {
+                        window.verbDaten = existingData;
+                    }
+                    reject(new Error(`Fehler beim Laden der Skriptdatei ${url}.`));
+                };
+                document.head.appendChild(script);
+            });
+        }
+
+        function renderConjugation(data) {
+            currentVerbData = data;
+            document.getElementById('verb-title').textContent = data.verbe;
+            document.getElementById('verb-infinitiv').textContent = data.infinitif || '–';
+            document.getElementById('verb-auxiliaire').textContent = data.auxiliaire || '–';
+            document.getElementById('verb-groupe').textContent = data.groupe || '–';
+
+            grid.innerHTML = '';
+
+            for (const [mode, tenses] of Object.entries(data.modes || {})) {
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.dataset.mode = mode;
+
+                const title = document.createElement('h3');
+                title.textContent = mode;
+                card.appendChild(title);
+
+                for (const [tense, forms] of Object.entries(tenses)) {
+                    const table = document.createElement('table');
+                    table.className = 'tense-table';
+
+                    const tbody = document.createElement('tbody');
+                    tbody.dataset.tense = tense;
+
+                    const headerRow = document.createElement('tr');
+                    const tenseClass = normalizeCssClass(tense);
+                    headerRow.className = `tense-heading tense-${tenseClass}`;
+                    headerRow.innerHTML = `
+                        <td colspan="2">
+                            <span>${tense}</span>
+                            <span class="tts-controls">
+                                <button type="button" class="tts-button play-button" aria-label="${tense} vorlesen">▶</button>
+                                <button type="button" class="tts-button pause-button" aria-label="Vorlesen pausieren">⏸</button>
+                                <button type="button" class="tts-button stop-button" aria-label="Vorlesen stoppen">⏹</button>
+                            </span>
+                        </td>
+                    `;
+                    const playButton = headerRow.querySelector('.play-button');
+                    const pauseButton = headerRow.querySelector('.pause-button');
+                    const stopButton = headerRow.querySelector('.stop-button');
+                    if (playButton) {
+                        playButton.addEventListener('click', () => {
+                            playSpeech(mode, tense, forms);
+                        });
+                    }
+                    if (pauseButton) {
+                        pauseButton.addEventListener('click', () => {
+                            pauseSpeech();
+                        });
+                    }
+                    if (stopButton) {
+                        stopButton.addEventListener('click', () => {
+                            stopSpeech();
+                        });
+                    }
+                    tbody.appendChild(headerRow);
+
+                    forms.forEach((form, index) => {
+                        const row = document.createElement('tr');
+                        const splitIndex = findPronounSplit(form);
+                        const pronoun = form.substring(0, splitIndex).trim();
+                        const verbForm = form.substring(splitIndex).trim();
+                        row.innerHTML = `
+                            <td class="pronoun">${pronoun}</td>
+                            <td class="verb-form">${verbForm}</td>
+                        `;
+                        tbody.appendChild(row);
+                    });
+                    table.appendChild(tbody);
+                    card.appendChild(table);
+                }
+                grid.appendChild(card);
+            }
+        }
+
+        function normalizeCssClass(text) {
+            return text.toLowerCase()
+                .normalize('NFD')
+                .replace(/\p{Diacritic}/gu, '')
+                .replace(/[^a-z0-9]+/g, '-')
+                .replace(/^-+|-+$/g, '');
+        }
+
+        function findPronounSplit(form) {
+            const apostropheIndex = form.indexOf("'");
+            if (apostropheIndex > 0) {
+                return apostropheIndex + 1;
+            }
+            const firstSpace = form.indexOf(' ');
+            return firstSpace < 0 ? form.length : firstSpace;
+        }
+
+        let currentUtterance = null;
+
+        function playSpeech(mode, tense, forms) {
+            if (!window.speechSynthesis) {
+                alert('Text-to-Speech wird von diesem Browser nicht unterstützt.');
+                return;
+            }
+            if (window.speechSynthesis.paused && window.speechSynthesis.speaking) {
+                window.speechSynthesis.resume();
+                return;
+            }
+            const text = `${mode}, ${tense}. ${forms.join('. ')}`;
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'fr-FR';
+            utterance.onend = () => {
+                currentUtterance = null;
+            };
+            currentUtterance = utterance;
+            window.speechSynthesis.cancel();
+            window.speechSynthesis.speak(utterance);
+        }
+
+        function pauseSpeech() {
+            if (!window.speechSynthesis) {
+                return;
+            }
+            if (window.speechSynthesis.speaking && !window.speechSynthesis.paused) {
+                window.speechSynthesis.pause();
+            }
+        }
+
+        function stopSpeech() {
+            if (!window.speechSynthesis) {
+                return;
+            }
+            window.speechSynthesis.cancel();
+            currentUtterance = null;
+        }
+
+        function buildTenseButtons(modes) {
+            tenseButtons.innerHTML = '';
+            if (!currentVerbData || !Array.isArray(modes) || modes.includes('alle') || modes.length === 0) {
+                return;
+            }
+
+            const tenses = new Set();
+            modes.forEach(mode => {
+                const modeData = (currentVerbData.modes || {})[mode];
+                if (modeData) {
+                    Object.keys(modeData).forEach(tense => tenses.add(tense));
+                }
+            });
+
+            if (tenses.size === 0) {
+                return;
+            }
+
+            const availableTenses = Array.from(tenses);
+            const hasSavedTenses = selectedTenseFilters.length > 0 && !selectedTenseFilters.includes('alle');
+            const validTenseSelections = hasSavedTenses
+                ? selectedTenseFilters.filter(tense => availableTenses.includes(tense))
+                : [];
+
+            if (hasSavedTenses && validTenseSelections.length === 0) {
+                selectedTenseFilters = ['alle'];
+            }
+
+            const allButton = document.createElement('label');
+            allButton.dataset.tense = 'alle';
+            allButton.innerHTML = `<input type="checkbox" data-tense="alle"><span>Alle</span>`;
+            const allInput = allButton.querySelector('input');
+            allInput.checked = selectedTenseFilters.includes('alle') || validTenseSelections.length === 0;
+            allInput.addEventListener('change', (event) => {
+                updateTenseSelection(event.target);
+            });
+            tenseButtons.appendChild(allButton);
+
+            availableTenses.forEach(tense => {
+                const label = document.createElement('label');
+                label.dataset.tense = tense;
+                label.className = 'tense-label';
+                label.innerHTML = `<input type="checkbox" data-tense="${tense}"><span>${tense}</span>`;
+                const input = label.querySelector('input');
+                input.checked = selectedTenseFilters.includes('alle')
+                    ? false
+                    : selectedTenseFilters.includes(tense);
+                input.addEventListener('change', (event) => {
+                    updateTenseSelection(event.target);
+                });
+                tenseButtons.appendChild(label);
+            });
+
+            restoreTenseCheckboxes();
+
+            if (selectedTenseFilters.includes('alle') || validTenseSelections.length === 0) {
+                updateTenseSelection();
+            }
+        }
+
+        function applyModeFilter() {
+            const selectedModes = selectedModeFilters;
+            const cards = grid.querySelectorAll('.card');
+            cards.forEach(card => {
+                card.style.display = selectedModes.length === 0 || selectedModes.includes('alle') || selectedModes.includes(card.dataset.mode) ? '' : 'none';
+            });
+            applyTenseFilter();
+        }
+
+        function applyTenseFilter() {
+            const selectedTenses = Array.from(document.querySelectorAll('#tense-buttons input[type="checkbox"]'))
+                .filter(input => input.checked)
+                .map(input => input.dataset.tense);
+
+            const cards = grid.querySelectorAll('.card');
+            if (selectedTenses.length === 0 || selectedTenses.includes('alle')) {
+                cards.forEach(card => {
+                    const rows = card.querySelectorAll('tbody[data-tense]');
+                    rows.forEach(tbody => {
+                        tbody.style.display = '';
+                    });
+                });
+                return;
+            }
+
+            cards.forEach(card => {
+                const rows = card.querySelectorAll('tbody[data-tense]');
+                rows.forEach(tbody => {
+                    tbody.style.display = selectedTenses.includes(tbody.dataset.tense) ? '' : 'none';
+                });
+            });
+        }
+
+        function selectAllTense() {
+            const tenseInputs = Array.from(document.querySelectorAll('#tense-buttons input[type="checkbox"]'));
+            const allInput = tenseInputs.find(input => input.dataset.tense === 'alle');
+
+            tenseInputs.forEach(input => {
+                if (input.dataset.tense !== 'alle') {
+                    input.checked = false;
+                }
+            });
+
+            if (allInput) {
+                allInput.checked = true;
+            }
+
+            selectedTenseFilters = ['alle'];
+            applyTenseFilter();
+        }
+
+        function selectTense(input) {
+            const tenseInputs = Array.from(document.querySelectorAll('#tense-buttons input[type="checkbox"]'));
+            const allInput = tenseInputs.find(item => item.dataset.tense === 'alle');
+            const selectedTenses = tenseInputs.filter(item => item.checked && item.dataset.tense !== 'alle');
+
+            if (input && input.dataset.tense !== 'alle' && input.checked && allInput) {
+                allInput.checked = false;
+            }
+
+            if (selectedTenses.length === 0) {
+                if (allInput) {
+                    allInput.checked = true;
+                }
+                selectedTenseFilters = ['alle'];
+            } else {
+                selectedTenseFilters = selectedTenses.map(item => item.dataset.tense);
+            }
+
+            applyTenseFilter();
+        }
+
+        function updateTenseSelection(changedInput) {
+            const tenseInputs = Array.from(document.querySelectorAll('#tense-buttons input[type="checkbox"]'));
+            const allInput = tenseInputs.find(input => input.dataset.tense === 'alle');
+            const selectedTenses = tenseInputs.filter(input => input.checked && input.dataset.tense !== 'alle');
+
+            if (changedInput && changedInput.dataset.tense === 'alle') {
+                if (changedInput.checked) {
+                    selectAllTense();
+                    return;
+                }
+
+                if (selectedTenses.length === 0) {
+                    selectAllTense();
+                    return;
+                }
+            }
+
+            if (selectedTenses.length > 0) {
+                selectTense(changedInput);
+                return;
+            }
+
+            selectAllTense();
+        }
+
+        function selectAllMode() {
+            const modeInputs = Array.from(document.querySelectorAll('.quickstart input[type="checkbox"]'));
+            const allInput = modeInputs.find(input => input.dataset.mode === 'alle');
+
+            modeInputs.forEach(input => {
+                if (input.dataset.mode !== 'alle') {
+                    input.checked = false;
+                }
+            });
+
+            if (allInput) {
+                allInput.checked = true;
+            }
+
+            selectedModeFilters = ['alle'];
+            activeModeFilter = 'alle';
+            buildTenseButtons(['alle']);
+            applyModeFilter();
+        }
+
+        function selectMode(input) {
+            const modeInputs = Array.from(document.querySelectorAll('.quickstart input[type="checkbox"]'));
+            const allInput = modeInputs.find(item => item.dataset.mode === 'alle');
+            const selectedModes = modeInputs.filter(item => item.checked && item.dataset.mode !== 'alle');
+
+            if (input && input.dataset.mode !== 'alle' && input.checked && allInput) {
+                allInput.checked = false;
+            }
+
+            if (selectedModes.length === 0) {
+                if (allInput) {
+                    allInput.checked = true;
+                }
+                selectedModeFilters = ['alle'];
+                activeModeFilter = 'alle';
+            } else {
+                selectedModeFilters = selectedModes.map(item => item.dataset.mode);
+                activeModeFilter = 'multiple';
+            }
+
+            const modes = activeModeFilter === 'alle' ? ['alle'] : selectedModeFilters;
+            buildTenseButtons(modes);
+            applyModeFilter();
+        }
+
+        function updateModeSelection(changedInput) {
+            const modeInputs = Array.from(document.querySelectorAll('.quickstart input[type="checkbox"]'));
+            const allInput = modeInputs.find(input => input.dataset.mode === 'alle');
+            const selectedModes = modeInputs.filter(input => input.checked && input.dataset.mode !== 'alle');
+
+            if (changedInput && changedInput.dataset.mode === 'alle') {
+                if (changedInput.checked) {
+                    selectAllMode();
+                    return;
+                }
+
+                if (selectedModes.length === 0) {
+                    selectAllMode();
+                    return;
+                }
+            }
+
+            if (selectedModes.length > 0) {
+                selectMode(changedInput);
+                return;
+            }
+
+            selectAllMode();
+        }
+
+        function showError(message) {
+            errorMsg.textContent = message;
+            errorMsg.style.display = 'block';
+            document.getElementById('verb-title').textContent = 'Fehler';
+            document.getElementById('verb-infinitiv').textContent = '–';
+            document.getElementById('verb-auxiliaire').textContent = '–';
+            document.getElementById('verb-groupe').textContent = '–';
+            document.getElementById('loading-indicator').style.display = 'none';
+            setLoading(false);
+        }
+
+        function setLoading(isLoading) {
+            document.getElementById('loading-indicator').style.display = isLoading ? 'block' : 'none';
+            verbSelect.disabled = isLoading;
+            document.querySelectorAll('.quickstart input[type="checkbox"]').forEach(input => {
+                input.disabled = isLoading;
+            });
+            document.querySelectorAll('#tense-buttons input[type="checkbox"]').forEach(input => {
+                input.disabled = isLoading;
+            });
+        }
+
+        function setVerb(verbId) {
+            verbSelect.value = verbId;
+            setLoading(true);
+            loadVerbData(verbId)
+                .then(data => {
+                    setLoading(false);
+                    renderConjugation(data);
+                    restoreModeCheckboxes();
+                    updateModeSelection();
+                })
+                .catch(err => showError(err.message));
+        }
+
+        function initialize() {
+            verbs.forEach(verb => verbSelect.appendChild(createOption(verb)));
+            verbSelect.value = 'etre';
+            verbSelect.addEventListener('change', () => {
+                setVerb(verbSelect.value);
+            });
+
+            document.querySelectorAll('.quickstart input[type="checkbox"]').forEach(input => {
+                input.addEventListener('change', (event) => {
+                    updateModeSelection(event.target);
+                });
+            });
+
+            setVerb(verbSelect.value);
+        }
+
+        document.addEventListener('DOMContentLoaded', initialize);
+    </script>
+</body>
+</html>
