@@ -1,0 +1,357 @@
+:root {
+    --primary: #2c3e50;
+    --accent: #3498db;
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --border: #dce3ea;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg);
+    color: var(--primary);
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 24px;
+}
+header {
+    text-align: center;
+    margin-bottom: 24px;
+}
+h1 {
+    margin: 0;
+    font-size: clamp(2rem, 2.5vw, 3rem);
+    color: var(--primary);
+}
+.subtitle {
+    color: #7f8c8d;
+    margin: 8px 0 22px;
+}
+.toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+}
+.quickstart,
+.subbuttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+.quickstart label,
+.subbuttons label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid var(--border);
+    background: #fff;
+    color: var(--primary);
+    padding: 6px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.92rem;
+}
+.mode-label.mode-alle { background: #f0f4ff; border-color: #d6e3ff; }
+.mode-label.mode-indicatif { background: #e8f5ff; border-color: #b8dcff; }
+.mode-label.mode-subjonctif { background: #f4e8ff; border-color: #ddb8ff; }
+.mode-label.mode-conditionnel { background: #e8fff1; border-color: #b8ffd3; }
+.mode-label.mode-imperatif { background: #fff7e8; border-color: #ffe1b8; }
+.mode-label.mode-participe { background: #e8fff9; border-color: #b8fff1; }
+.subbuttons label[data-tense="alle"] { background: #f0f4ff; border-color: #d6e3ff; }
+.subbuttons label[data-tense="Indicatif"] { background: #e8f5ff; border-color: #b8dcff; }
+.subbuttons label[data-tense="Subjonctif"] { background: #f4e8ff; border-color: #ddb8ff; }
+.subbuttons label[data-tense="Conditionnel"] { background: #e8fff1; border-color: #b8ffd3; }
+.subbuttons label[data-tense="Impératif"] { background: #fff7e8; border-color: #ffe1b8; }
+.subbuttons label[data-tense="Participe"] { background: #e8fff9; border-color: #b8fff1; }
+.quickstart input[type="checkbox"],
+.subbuttons input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--accent);
+}
+.quickstart label:hover,
+.subbuttons label:hover {
+    border-color: var(--accent);
+    background: rgba(52, 152, 219, 0.08);
+}
+.quickstart label:has(input[type="checkbox"]:checked),
+.subbuttons label:has(input[type="checkbox"]:checked) {
+    background: rgba(52, 152, 219, 0.16);
+    border-color: #3498db;
+    color: #2c3e50;
+    box-shadow: 0 0 0 1px rgba(52, 152, 219, 0.3);
+}
+.quickstart input[type="checkbox"]:checked + span,
+.subbuttons input[type="checkbox"]:checked + span {
+    color: var(--accent);
+    font-weight: 700;
+}
+label {
+    font-weight: 600;
+    color: var(--primary);
+}
+select {
+    min-width: 200px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: #fff;
+    color: var(--primary);
+}
+.info-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px;
+    margin-bottom: 18px;
+}
+.info-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    padding: 14px 16px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.info-card strong {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--accent);
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+}
+.card {
+    overflow: hidden;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+}
+tr + tr td {
+    border-top: 1px solid #edf2f7;
+}
+td {
+    padding: 10px 0;
+    font-size: 0.97rem;
+}
+.card table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    border: 1px solid rgba(44, 62, 80, 0.08);
+    border-radius: 14px;
+    background: #ffffff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+}
+.card table tbody {
+    border-top: 1px solid rgba(44, 62, 80, 0.08);
+}
+.card table tr {
+    transition: background 0.2s ease;
+}
+.card table tr:hover {
+    background: rgba(52, 152, 219, 0.05);
+}
+.card table tr + tr td {
+    border-top: 1px solid rgba(44, 62, 80, 0.08);
+}
+.card table td {
+    padding: 12px 14px;
+    white-space: normal;
+}
+.card table + table {
+    margin-top: 16px;
+}
+.tense-heading td {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 14px 16px;
+    font-weight: 700;
+    color: #34495e;
+    background: #f5f8fb;
+    border-bottom: 1px solid rgba(52, 73, 94, 0.12);
+}
+.tense-heading td .tts-controls {
+    display: inline-flex;
+    gap: 8px;
+}
+.tense-heading td .tts-button {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 999px;
+    border: none;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+    font-size: 0.95rem;
+}
+.tense-heading td .play-button {
+    background: #2ecc71;
+}
+.tense-heading td .play-button:hover {
+    transform: scale(1.05);
+    background: #28b86a;
+}
+.tense-heading td .pause-button {
+    background: #f1c40f;
+}
+.tense-heading td .pause-button:hover {
+    transform: scale(1.05);
+    background: #d9b30a;
+}
+.tense-heading td .stop-button {
+    background: #e74c3c;
+}
+.tense-heading td .stop-button:hover {
+    transform: scale(1.05);
+    background: #cf4336;
+}
+.tense-heading td .tts-button:focus-visible {
+    outline: 2px solid rgba(0,0,0,0.2);
+    outline-offset: 2px;
+}
+.tense-heading.tense-present td,
+.tense-heading.tense-present-simple td,
+.tense-heading.tense-pr%C3%A9sent td {
+    background: #e8f5ff;
+}
+.tense-heading.tense-passe-compose td,
+.tense-heading.tense-passe-composé td,
+.tense-heading.tense-passe-composee td {
+    background: #f5e8ff;
+}
+.tense-heading.tense-imparfait td {
+    background: #e8fff1;
+}
+.tense-heading.tense-plus-que-parfait td {
+    background: #fff7e8;
+}
+.tense-heading.tense-futur-simple td,
+.tense-heading.tense-futur td {
+    background: #fff3e0;
+}
+.tense-heading.tense-conditionnel-present td,
+.tense-heading.tense-conditionnel td {
+    background: #e8fff9;
+}
+.tense-heading.tense-subjonctif-present td,
+.tense-heading.tense-subjonctif td {
+    background: #fff0f8;
+}
+.tense-heading.tense-imperatif-present td,
+.tense-heading.tense-imperatif td {
+    background: #fff4e4;
+}
+.tense-heading.tense-participe-present td,
+.tense-heading.tense-participe-passe td,
+.tense-heading.tense-participe td {
+    background: #eefaf7;
+}
+@media (max-width: 800px) {
+    body {
+        padding: 16px;
+    }
+    .toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    select {
+        width: 100%;
+    }
+    .quickstart,
+    .subbuttons {
+        justify-content: flex-start;
+    }
+    .info-row {
+        grid-template-columns: 1fr;
+    }
+}
+.card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    border-top: 4px solid var(--accent);
+}
+.card[data-mode="Indicatif"] {
+    background: #e8f6ff;
+    border-top-color: #3498db;
+}
+.card[data-mode="Subjonctif"] {
+    background: #f5e8ff;
+    border-top-color: #9b59b6;
+}
+.card[data-mode="Conditionnel"] {
+    background: #e8fff4;
+    border-top-color: #1abc9c;
+}
+.card[data-mode="Impératif"] {
+    background: #fff8e8;
+    border-top-color: #f39c12;
+}
+.card[data-mode="Participe"] {
+    background: #e8fff8;
+    border-top-color: #16a085;
+}
+.card[data-mode="Indicatif"] .tense-heading td {
+    background: #d6eafc;
+}
+.card[data-mode="Subjonctif"] .tense-heading td {
+    background: #e7d1ff;
+}
+.card[data-mode="Conditionnel"] .tense-heading td {
+    background: #d0ffe6;
+}
+.card[data-mode="Impératif"] .tense-heading td {
+    background: #ffe6cc;
+}
+.card[data-mode="Participe"] .tense-heading td {
+    background: #ccfbf1;
+}
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: var(--primary);
+    font-size: 1.1rem;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+tr + tr td {
+    border-top: 1px solid #edf2f7;
+}
+td {
+    padding: 10px 0;
+    font-size: 0.97rem;
+}
+.pronoun {
+    font-weight: 700;
+    color: #34495e;
+    width: 38%;
+}
+.verb-form {
+    color: #2c3e50;
+}
+#error-msg {
+    color: #e74c3c;
+    text-align: center;
+    font-weight: bold;
+    display: none;
+    margin-bottom: 16px;
+}
