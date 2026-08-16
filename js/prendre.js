@@ -6,152 +6,152 @@ window.verbDaten = {
     "modes": {
         "Indicatif": {
             "Présent": [
-                "je pr ends",
-                "tu pr ends",
-                "il pr end",
-                "nous pr enons",
-                "vous pr enez",
-                "ils pr ennent"
+                "je prends",
+                "tu prends",
+                "il prend",
+                "nous prenons",
+                "vous prenez",
+                "ils prennent"
             ],
             "Passé composé": [
-                "j'ai pr is",
-                "tu as pr is",
-                "il a pr is",
-                "nous avons pr is",
-                "vous avez pr is",
-                "ils ont pr is"
+                "j'ai pris",
+                "tu as pris",
+                "il a pris",
+                "nous avons pris",
+                "vous avez pris",
+                "ils ont pris"
             ],
             "Imparfait": [
-                "je pr enais",
-                "tu pr enais",
-                "il pr enait",
-                "nous pr enions",
-                "vous pr eniez",
-                "ils pr enaient"
+                "je prenais",
+                "tu prenais",
+                "il prenait",
+                "nous prenions",
+                "vous preniez",
+                "ils prenaient"
             ],
             "Plus-que-parfait": [
-                "j'avais pr is",
-                "tu avais pr is",
-                "il avait pr is",
-                "nous avions pr is",
-                "vous aviez pr is",
-                "ils avaient pr is"
+                "j'avais pris",
+                "tu avais pris",
+                "il avait pris",
+                "nous avions pris",
+                "vous aviez pris",
+                "ils avaient pris"
             ],
             "Passé simple": [
-                "je pr is",
-                "tu pr is",
-                "il pr it",
-                "nous pr îmes",
-                "vous pr îtes",
-                "ils pr irent"
+                "je pris",
+                "tu pris",
+                "il prit",
+                "nous prîmes",
+                "vous prîtes",
+                "ils prirent"
             ],
             "Passé antérieur": [
-                "j'eus pr is",
-                "tu eus pr is",
-                "il eut pr is",
-                "nous eûmes pr is",
-                "vous eûtes pr is",
-                "ils eurent pr is"
+                "j'eus pris",
+                "tu eus pris",
+                "il eut pris",
+                "nous eûmes pris",
+                "vous eûtes pris",
+                "ils eurent pris"
             ],
             "Futur simple": [
-                "je pr endrai",
-                "tu pr endras",
-                "il pr endra",
-                "nous pr endrons",
-                "vous pr endrez",
-                "ils pr endront"
+                "je prendrai",
+                "tu prendras",
+                "il prendra",
+                "nous prendrons",
+                "vous prendrez",
+                "ils prendront"
             ],
             "Futur antérieur": [
-                "j'aurai pr is",
-                "tu auras pr is",
-                "il aura pr is",
-                "nous aurons pr is",
-                "vous aurez pr is",
-                "ils auront pr is"
+                "j'aurai pris",
+                "tu auras pris",
+                "il aura pris",
+                "nous aurons pris",
+                "vous aurez pris",
+                "ils auront pris"
             ]
         },
         "Subjonctif": {
             "Présent": [
-                "que je pr enne",
-                "que tu pr ennes",
-                "qu'il pr enne",
-                "que nous pr enions",
-                "que vous pr eniez",
-                "qu'ils pr ennent"
+                "que je prenne",
+                "que tu prennes",
+                "qu'il prenne",
+                "que nous prenions",
+                "que vous preniez",
+                "qu'ils prennent"
             ],
             "Passé": [
-                "que j'aie pr is",
-                "que tu aies pr is",
-                "qu'il ait pr is",
-                "que nous ayons pr is",
-                "que vous ayez pr is",
-                "qu'ils aient pr is"
+                "que j'aie pris",
+                "que tu aies pris",
+                "qu'il ait pris",
+                "que nous ayons pris",
+                "que vous ayez pris",
+                "qu'ils aient pris"
             ],
             "Imparfait": [
-                "que je pr isse",
-                "que tu pr isses",
-                "qu'il pr ît",
-                "que nous pr issions",
-                "que vous pr issiez",
-                "qu'ils pr issent"
+                "que je prisse",
+                "que tu prisses",
+                "qu'il prît",
+                "que nous prissions",
+                "que vous prissiez",
+                "qu'ils prissent"
             ],
             "Plus-que-parfait": [
-                "que j'eusse pr is",
-                "que tu eusses pr is",
-                "qu'il eût pr is",
-                "que nous eussions pr is",
-                "que vous eussiez pr is",
-                "qu'ils eussent pr is"
+                "que j'eusse pris",
+                "que tu eusses pris",
+                "qu'il eût pris",
+                "que nous eussions pris",
+                "que vous eussiez pris",
+                "qu'ils eussent pris"
             ]
         },
         "Conditionnel": {
             "Présent": [
-                "je pr endrais",
-                "tu pr endrais",
-                "il pr endrait",
-                "nous pr endrions",
-                "vous pr endriez",
-                "ils pr endraient"
+                "je prendrais",
+                "tu prendrais",
+                "il prendrait",
+                "nous prendrions",
+                "vous prendriez",
+                "ils prendraient"
             ],
             "Passé première forme": [
-                "j'aurais pr is",
-                "tu aurais pr is",
-                "il aurait pr is",
-                "nous aurions pr is",
-                "vous auriez pr is",
-                "ils auraient pr is"
+                "j'aurais pris",
+                "tu aurais pris",
+                "il aurait pris",
+                "nous aurions pris",
+                "vous auriez pris",
+                "ils auraient pris"
             ],
             "Passé deuxième forme": [
-                "j'eusse pr is",
-                "tu eusses pr is",
-                "il eût pr is",
-                "nous eussions pr is",
-                "vous eussiez pr is",
-                "ils eussent pr is"
+                "j'eusse pris",
+                "tu eusses pris",
+                "il eût pris",
+                "nous eussions pris",
+                "vous eussiez pris",
+                "ils eussent pris"
             ]
         },
         "Impératif": {
             "Présent": [
-                "pr ends",
-                "pr enons",
-                "pr enez"
+                "prends",
+                "prenons",
+                "prenez"
             ],
             "Passé": [
-                "aie pr is",
-                "ayons pr is",
-                "ayez pr is"
+                "aie pris",
+                "ayons pris",
+                "ayez pris"
             ]
         },
         "Participe": {
             "Présent": [
-                "pr enant"
+                "prenant"
             ],
             "Passé": [
-                "pr is",
-                "pr ise",
-                "pr is",
-                "pr ises",
-                "ayant pr is"
+                "pris",
+                "prise",
+                "pris",
+                "prises",
+                "ayant pris"
             ]
         },
         "Infinitif": {
@@ -159,15 +159,15 @@ window.verbDaten = {
                 "prendre"
             ],
             "Passé": [
-                "avoir pr is"
+                "avoir pris"
             ]
         },
         "Gérondif": {
             "Présent": [
-                "en pr enant"
+                "en prenant"
             ],
             "Passé": [
-                "en ayant pr is"
+                "en ayant pris"
             ]
         },
         "Tournure de phrase avec le verbe prendre": {

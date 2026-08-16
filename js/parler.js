@@ -6,152 +6,152 @@ window.verbDaten = {
     "modes": {
         "Indicatif": {
             "Présent": [
-                "je parl e",
-                "tu parl es",
-                "il parl e",
-                "nous parl ons",
-                "vous parl ez",
-                "ils parl ent"
+                "je parle",
+                "tu parles",
+                "il parle",
+                "nous parlons",
+                "vous parlez",
+                "ils parlent"
             ],
             "Passé composé": [
-                "j'ai parl é",
-                "tu as parl é",
-                "il a parl é",
-                "nous avons parl é",
-                "vous avez parl é",
-                "ils ont parl é"
+                "j'ai parlé",
+                "tu as parlé",
+                "il a parlé",
+                "nous avons parlé",
+                "vous avez parlé",
+                "ils ont parlé"
             ],
             "Imparfait": [
-                "je parl ais",
-                "tu parl ais",
-                "il parl ait",
-                "nous parl ions",
-                "vous parl iez",
-                "ils parl aient"
+                "je parlais",
+                "tu parlais",
+                "il parlait",
+                "nous parlions",
+                "vous parliez",
+                "ils parlaient"
             ],
             "Plus-que-parfait": [
-                "j'avais parl é",
-                "tu avais parl é",
-                "il avait parl é",
-                "nous avions parl é",
-                "vous aviez parl é",
-                "ils avaient parl é"
+                "j'avais parlé",
+                "tu avais parlé",
+                "il avait parlé",
+                "nous avions parlé",
+                "vous aviez parlé",
+                "ils avaient parlé"
             ],
             "Passé simple": [
-                "je parl ai",
-                "tu parl as",
-                "il parl a",
-                "nous parl âmes",
-                "vous parl âtes",
-                "ils parl èrent"
+                "je parlai",
+                "tu parlas",
+                "il parla",
+                "nous parlâmes",
+                "vous parlâtes",
+                "ils parlèrent"
             ],
             "Passé antérieur": [
-                "j'eus parl é",
-                "tu eus parl é",
-                "il eut parl é",
-                "nous eûmes parl é",
-                "vous eûtes parl é",
-                "ils eurent parl é"
+                "j'eus parlé",
+                "tu eus parlé",
+                "il eut parlé",
+                "nous eûmes parlé",
+                "vous eûtes parlé",
+                "ils eurent parlé"
             ],
             "Futur simple": [
-                "je parl erai",
-                "tu parl eras",
-                "il parl era",
-                "nous parl erons",
-                "vous parl erez",
-                "ils parl eront"
+                "je parlerai",
+                "tu parleras",
+                "il parlera",
+                "nous parlerons",
+                "vous parlerez",
+                "ils parleront"
             ],
             "Futur antérieur": [
-                "j'aurai parl é",
-                "tu auras parl é",
-                "il aura parl é",
-                "nous aurons parl é",
-                "vous aurez parl é",
-                "ils auront parl é"
+                "j'aurai parlé",
+                "tu auras parlé",
+                "il aura parlé",
+                "nous aurons parlé",
+                "vous aurez parlé",
+                "ils auront parlé"
             ]
         },
         "Subjonctif": {
             "Présent": [
-                "que je parl e",
-                "que tu parl es",
-                "qu'il parl e",
-                "que nous parl ions",
-                "que vous parl iez",
-                "qu'ils parl ent"
+                "que je parle",
+                "que tu parles",
+                "qu'il parle",
+                "que nous parlions",
+                "que vous parliez",
+                "qu'ils parlent"
             ],
             "Passé": [
-                "que j'aie parl é",
-                "que tu aies parl é",
-                "qu'il ait parl é",
-                "que nous ayons parl é",
-                "que vous ayez parl é",
-                "qu'ils aient parl é"
+                "que j'aie parlé",
+                "que tu aies parlé",
+                "qu'il ait parlé",
+                "que nous ayons parlé",
+                "que vous ayez parlé",
+                "qu'ils aient parlé"
             ],
             "Imparfait": [
-                "que je parl asse",
-                "que tu parl asses",
-                "qu'il parl ât",
-                "que nous parl assions",
-                "que vous parl assiez",
-                "qu'ils parl assent"
+                "que je parlasse",
+                "que tu parlasses",
+                "qu'il parlât",
+                "que nous parlassions",
+                "que vous parlassiez",
+                "qu'ils parlassent"
             ],
             "Plus-que-parfait": [
-                "que j'eusse parl é",
-                "que tu eusses parl é",
-                "qu'il eût parl é",
-                "que nous eussions parl é",
-                "que vous eussiez parl é",
-                "qu'ils eussent parl é"
+                "que j'eusse parlé",
+                "que tu eusses parlé",
+                "qu'il eût parlé",
+                "que nous eussions parlé",
+                "que vous eussiez parlé",
+                "qu'ils eussent parlé"
             ]
         },
         "Conditionnel": {
             "Présent": [
-                "je parl erais",
-                "tu parl erais",
-                "il parl erait",
-                "nous parl erions",
-                "vous parl eriez",
-                "ils parl eraient"
+                "je parlerais",
+                "tu parlerais",
+                "il parlerait",
+                "nous parlerions",
+                "vous parleriez",
+                "ils parleraient"
             ],
             "Passé première forme": [
-                "j'aurais parl é",
-                "tu aurais parl é",
-                "il aurait parl é",
-                "nous aurions parl é",
-                "vous auriez parl é",
-                "ils auraient parl é"
+                "j'aurais parlé",
+                "tu aurais parlé",
+                "il aurait parlé",
+                "nous aurions parlé",
+                "vous auriez parlé",
+                "ils auraient parlé"
             ],
             "Passé deuxième forme": [
-                "j'eusse parl é",
-                "tu eusses parl é",
-                "il eût parl é",
-                "nous eussions parl é",
-                "vous eussiez parl é",
-                "ils eussent parl é"
+                "j'eusse parlé",
+                "tu eusses parlé",
+                "il eût parlé",
+                "nous eussions parlé",
+                "vous eussiez parlé",
+                "ils eussent parlé"
             ]
         },
         "Impératif": {
             "Présent": [
-                "parl e",
-                "parl ons",
-                "parl ez"
+                "parle",
+                "parlons",
+                "parlez"
             ],
             "Passé": [
-                "aie parl é",
-                "ayons parl é",
-                "ayez parl é"
+                "aie parlé",
+                "ayons parlé",
+                "ayez parlé"
             ]
         },
         "Participe": {
             "Présent": [
-                "parl ant"
+                "parlant"
             ],
             "Passé": [
-                "parl é",
-                "parl ée",
-                "parl és",
-                "parl ées",
-                "ayant parl é"
+                "parlé",
+                "parlée",
+                "parlés",
+                "parlées",
+                "ayant parlé"
             ]
         },
         "Infinitif": {
@@ -159,15 +159,15 @@ window.verbDaten = {
                 "parler"
             ],
             "Passé": [
-                "avoir parl é"
+                "avoir parlé"
             ]
         },
         "Gérondif": {
             "Présent": [
-                "en parl ant"
+                "en parlant"
             ],
             "Passé": [
-                "en ayant parl é"
+                "en ayant parlé"
             ]
         },
         "Tournure de phrase avec le verbe parler": {

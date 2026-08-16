@@ -6,152 +6,152 @@ window.verbDaten = {
     "modes": {
         "Indicatif": {
             "Présent": [
-                "je cr ois",
-                "tu cr ois",
-                "il cr oit",
-                "nous cr oyons",
-                "vous cr oyez",
-                "ils cr oient"
+                "je crois",
+                "tu crois",
+                "il croit",
+                "nous croyons",
+                "vous croyez",
+                "ils croient"
             ],
             "Passé composé": [
-                "j'ai cr u",
-                "tu as cr u",
-                "il a cr u",
-                "nous avons cr u",
-                "vous avez cr u",
-                "ils ont cr u"
+                "j'ai cru",
+                "tu as cru",
+                "il a cru",
+                "nous avons cru",
+                "vous avez cru",
+                "ils ont cru"
             ],
             "Imparfait": [
-                "je cr oyais",
-                "tu cr oyais",
-                "il cr oyait",
-                "nous cr oyions",
-                "vous cr oyiez",
-                "ils cr oyaient"
+                "je croyais",
+                "tu croyais",
+                "il croyait",
+                "nous croyions",
+                "vous croyiez",
+                "ils croyaient"
             ],
             "Plus-que-parfait": [
-                "j'avais cr u",
-                "tu avais cr u",
-                "il avait cr u",
-                "nous avions cr u",
-                "vous aviez cr u",
-                "ils avaient cr u"
+                "j'avais cru",
+                "tu avais cru",
+                "il avait cru",
+                "nous avions cru",
+                "vous aviez cru",
+                "ils avaient cru"
             ],
             "Passé simple": [
-                "je cr us",
-                "tu cr us",
-                "il cr ut",
-                "nous cr ûmes",
-                "vous cr ûtes",
-                "ils cr urent"
+                "je crus",
+                "tu crus",
+                "il crut",
+                "nous crûmes",
+                "vous crûtes",
+                "ils crurent"
             ],
             "Passé antérieur": [
-                "j'eus cr u",
-                "tu eus cr u",
-                "il eut cr u",
-                "nous eûmes cr u",
-                "vous eûtes cr u",
-                "ils eurent cr u"
+                "j'eus cru",
+                "tu eus cru",
+                "il eut cru",
+                "nous eûmes cru",
+                "vous eûtes cru",
+                "ils eurent cru"
             ],
             "Futur simple": [
-                "je cr oirai",
-                "tu cr oiras",
-                "il cr oira",
-                "nous cr oirons",
-                "vous cr oirez",
-                "ils cr oiront"
+                "je croirai",
+                "tu croiras",
+                "il croira",
+                "nous croirons",
+                "vous croirez",
+                "ils croiront"
             ],
             "Futur antérieur": [
-                "j'aurai cr u",
-                "tu auras cr u",
-                "il aura cr u",
-                "nous aurons cr u",
-                "vous aurez cr u",
-                "ils auront cr u"
+                "j'aurai cru",
+                "tu auras cru",
+                "il aura cru",
+                "nous aurons cru",
+                "vous aurez cru",
+                "ils auront cru"
             ]
         },
         "Subjonctif": {
             "Présent": [
-                "que je cr oie",
-                "que tu cr oies",
-                "qu'il cr oie",
-                "que nous cr oyions",
-                "que vous cr oyiez",
-                "qu'ils cr oient"
+                "que je croie",
+                "que tu croies",
+                "qu'il croie",
+                "que nous croyions",
+                "que vous croyiez",
+                "qu'ils croient"
             ],
             "Passé": [
-                "que j'aie cr u",
-                "que tu aies cr u",
-                "qu'il ait cr u",
-                "que nous ayons cr u",
-                "que vous ayez cr u",
-                "qu'ils aient cr u"
+                "que j'aie cru",
+                "que tu aies cru",
+                "qu'il ait cru",
+                "que nous ayons cru",
+                "que vous ayez cru",
+                "qu'ils aient cru"
             ],
             "Imparfait": [
-                "que je cr usse",
-                "que tu cr usses",
-                "qu'il cr ût",
-                "que nous cr ussions",
-                "que vous cr ussiez",
-                "qu'ils cr ussent"
+                "que je crusse",
+                "que tu crusses",
+                "qu'il crût",
+                "que nous crussions",
+                "que vous crussiez",
+                "qu'ils crussent"
             ],
             "Plus-que-parfait": [
-                "que j'eusse cr u",
-                "que tu eusses cr u",
-                "qu'il eût cr u",
-                "que nous eussions cr u",
-                "que vous eussiez cr u",
-                "qu'ils eussent cr u"
+                "que j'eusse cru",
+                "que tu eusses cru",
+                "qu'il eût cru",
+                "que nous eussions cru",
+                "que vous eussiez cru",
+                "qu'ils eussent cru"
             ]
         },
         "Conditionnel": {
             "Présent": [
-                "je cr oirais",
-                "tu cr oirais",
-                "il cr oirait",
-                "nous cr oirions",
-                "vous cr oiriez",
-                "ils cr oiraient"
+                "je croirais",
+                "tu croirais",
+                "il croirait",
+                "nous croirions",
+                "vous croiriez",
+                "ils croiraient"
             ],
             "Passé première forme": [
-                "j'aurais cr u",
-                "tu aurais cr u",
-                "il aurait cr u",
-                "nous aurions cr u",
-                "vous auriez cr u",
-                "ils auraient cr u"
+                "j'aurais cru",
+                "tu aurais cru",
+                "il aurait cru",
+                "nous aurions cru",
+                "vous auriez cru",
+                "ils auraient cru"
             ],
             "Passé deuxième forme": [
-                "j'eusse cr u",
-                "tu eusses cr u",
-                "il eût cr u",
-                "nous eussions cr u",
-                "vous eussiez cr u",
-                "ils eussent cr u"
+                "j'eusse cru",
+                "tu eusses cru",
+                "il eût cru",
+                "nous eussions cru",
+                "vous eussiez cru",
+                "ils eussent cru"
             ]
         },
         "Impératif": {
             "Présent": [
-                "cr ois",
-                "cr oyons",
-                "cr oyez"
+                "crois",
+                "croyons",
+                "croyez"
             ],
             "Passé": [
-                "aie cr u",
-                "ayons cr u",
-                "ayez cr u"
+                "aie cru",
+                "ayons cru",
+                "ayez cru"
             ]
         },
         "Participe": {
             "Présent": [
-                "cr oyant"
+                "croyant"
             ],
             "Passé": [
-                "cr u",
-                "cr ue",
-                "cr us",
-                "cr ues",
-                "ayant cr u"
+                "cru",
+                "crue",
+                "crus",
+                "crues",
+                "ayant cru"
             ]
         },
         "Infinitif": {
@@ -159,15 +159,15 @@ window.verbDaten = {
                 "croire"
             ],
             "Passé": [
-                "avoir cr u"
+                "avoir cru"
             ]
         },
         "Gérondif": {
             "Présent": [
-                "en cr oyant"
+                "en croyant"
             ],
             "Passé": [
-                "en ayant cr u"
+                "en ayant cru"
             ]
         },
         "Tournure de phrase avec le verbe croire": {

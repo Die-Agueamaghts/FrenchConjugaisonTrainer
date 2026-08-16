@@ -6,152 +6,152 @@ window.verbDaten = {
     "modes": {
         "Indicatif": {
             "Présent": [
-                "je donn e",
-                "tu donn es",
-                "il donn e",
-                "nous donn ons",
-                "vous donn ez",
-                "ils donn ent"
+                "je donne",
+                "tu donnes",
+                "il donne",
+                "nous donnons",
+                "vous donnez",
+                "ils donnent"
             ],
             "Passé composé": [
-                "j'ai donn é",
-                "tu as donn é",
-                "il a donn é",
-                "nous avons donn é",
-                "vous avez donn é",
-                "ils ont donn é"
+                "j'ai donné",
+                "tu as donné",
+                "il a donné",
+                "nous avons donné",
+                "vous avez donné",
+                "ils ont donné"
             ],
             "Imparfait": [
-                "je donn ais",
-                "tu donn ais",
-                "il donn ait",
-                "nous donn ions",
-                "vous donn iez",
-                "ils donn aient"
+                "je donnais",
+                "tu donnais",
+                "il donnait",
+                "nous donnions",
+                "vous donniez",
+                "ils donnaient"
             ],
             "Plus-que-parfait": [
-                "j'avais donn é",
-                "tu avais donn é",
-                "il avait donn é",
-                "nous avions donn é",
-                "vous aviez donn é",
-                "ils avaient donn é"
+                "j'avais donné",
+                "tu avais donné",
+                "il avait donné",
+                "nous avions donné",
+                "vous aviez donné",
+                "ils avaient donné"
             ],
             "Passé simple": [
-                "je donn ai",
-                "tu donn as",
-                "il donn a",
-                "nous donn âmes",
-                "vous donn âtes",
-                "ils donn èrent"
+                "je donnai",
+                "tu donnas",
+                "il donna",
+                "nous donnâmes",
+                "vous donnâtes",
+                "ils donnèrent"
             ],
             "Passé antérieur": [
-                "j'eus donn é",
-                "tu eus donn é",
-                "il eut donn é",
-                "nous eûmes donn é",
-                "vous eûtes donn é",
-                "ils eurent donn é"
+                "j'eus donné",
+                "tu eus donné",
+                "il eut donné",
+                "nous eûmes donné",
+                "vous eûtes donné",
+                "ils eurent donné"
             ],
             "Futur simple": [
-                "je donn erai",
-                "tu donn eras",
-                "il donn era",
-                "nous donn erons",
-                "vous donn erez",
-                "ils donn eront"
+                "je donnerai",
+                "tu donneras",
+                "il donnera",
+                "nous donnerons",
+                "vous donnerez",
+                "ils donneront"
             ],
             "Futur antérieur": [
-                "j'aurai donn é",
-                "tu auras donn é",
-                "il aura donn é",
-                "nous aurons donn é",
-                "vous aurez donn é",
-                "ils auront donn é"
+                "j'aurai donné",
+                "tu auras donné",
+                "il aura donné",
+                "nous aurons donné",
+                "vous aurez donné",
+                "ils auront donné"
             ]
         },
         "Subjonctif": {
             "Présent": [
-                "que je donn e",
-                "que tu donn es",
-                "qu'il donn e",
-                "que nous donn ions",
-                "que vous donn iez",
-                "qu'ils donn ent"
+                "que je donne",
+                "que tu donnes",
+                "qu'il donne",
+                "que nous donnions",
+                "que vous donniez",
+                "qu'ils donnent"
             ],
             "Passé": [
-                "que j'aie donn é",
-                "que tu aies donn é",
-                "qu'il ait donn é",
-                "que nous ayons donn é",
-                "que vous ayez donn é",
-                "qu'ils aient donn é"
+                "que j'aie donné",
+                "que tu aies donné",
+                "qu'il ait donné",
+                "que nous ayons donné",
+                "que vous ayez donné",
+                "qu'ils aient donné"
             ],
             "Imparfait": [
-                "que je donn asse",
-                "que tu donn asses",
-                "qu'il donn ât",
-                "que nous donn assions",
-                "que vous donn assiez",
-                "qu'ils donn assent"
+                "que je donnasse",
+                "que tu donnasses",
+                "qu'il donnât",
+                "que nous donnassions",
+                "que vous donnassiez",
+                "qu'ils donnassent"
             ],
             "Plus-que-parfait": [
-                "que j'eusse donn é",
-                "que tu eusses donn é",
-                "qu'il eût donn é",
-                "que nous eussions donn é",
-                "que vous eussiez donn é",
-                "qu'ils eussent donn é"
+                "que j'eusse donné",
+                "que tu eusses donné",
+                "qu'il eût donné",
+                "que nous eussions donné",
+                "que vous eussiez donné",
+                "qu'ils eussent donné"
             ]
         },
         "Conditionnel": {
             "Présent": [
-                "je donn erais",
-                "tu donn erais",
-                "il donn erait",
-                "nous donn erions",
-                "vous donn eriez",
-                "ils donn eraient"
+                "je donnerais",
+                "tu donnerais",
+                "il donnerait",
+                "nous donnerions",
+                "vous donneriez",
+                "ils donneraient"
             ],
             "Passé première forme": [
-                "j'aurais donn é",
-                "tu aurais donn é",
-                "il aurait donn é",
-                "nous aurions donn é",
-                "vous auriez donn é",
-                "ils auraient donn é"
+                "j'aurais donné",
+                "tu aurais donné",
+                "il aurait donné",
+                "nous aurions donné",
+                "vous auriez donné",
+                "ils auraient donné"
             ],
             "Passé deuxième forme": [
-                "j'eusse donn é",
-                "tu eusses donn é",
-                "il eût donn é",
-                "nous eussions donn é",
-                "vous eussiez donn é",
-                "ils eussent donn é"
+                "j'eusse donné",
+                "tu eusses donné",
+                "il eût donné",
+                "nous eussions donné",
+                "vous eussiez donné",
+                "ils eussent donné"
             ]
         },
         "Impératif": {
             "Présent": [
-                "donn e",
-                "donn ons",
-                "donn ez"
+                "donne",
+                "donnons",
+                "donnez"
             ],
             "Passé": [
-                "aie donn é",
-                "ayons donn é",
-                "ayez donn é"
+                "aie donné",
+                "ayons donné",
+                "ayez donné"
             ]
         },
         "Participe": {
             "Présent": [
-                "donn ant"
+                "donnant"
             ],
             "Passé": [
-                "donn é",
-                "donn ée",
-                "donn és",
-                "donn ées",
-                "ayant donn é"
+                "donné",
+                "donnée",
+                "donnés",
+                "données",
+                "ayant donné"
             ]
         },
         "Infinitif": {
@@ -159,15 +159,15 @@ window.verbDaten = {
                 "donner"
             ],
             "Passé": [
-                "avoir donn é"
+                "avoir donné"
             ]
         },
         "Gérondif": {
             "Présent": [
-                "en donn ant"
+                "en donnant"
             ],
             "Passé": [
-                "en ayant donn é"
+                "en ayant donné"
             ]
         },
         "Tournure de phrase avec le verbe donner": {

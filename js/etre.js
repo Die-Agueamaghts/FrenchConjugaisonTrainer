@@ -1,7 +1,7 @@
 window.verbDaten = {
     "verbe": "être",
     "infinitif": "être",
-    "groupe": "premier groupe",
+    "groupe": "troisième groupe",
     "auxiliaire": "avoir",
     "modes": {
         "Indicatif": {

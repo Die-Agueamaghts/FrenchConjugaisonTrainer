@@ -6,152 +6,152 @@ window.verbDaten = {
     "modes": {
         "Indicatif": {
             "Présent": [
-                "j'aim e",
-                "tu aim es",
-                "il aim e",
-                "nous aim ons",
-                "vous aim ez",
-                "ils aim ent"
+                "j'aime",
+                "tu aimes",
+                "il aime",
+                "nous aimons",
+                "vous aimez",
+                "ils aiment"
             ],
             "Passé composé": [
-                "j'ai aim é",
-                "tu as aim é",
-                "il a aim é",
-                "nous avons aim é",
-                "vous avez aim é",
-                "ils ont aim é"
+                "j'ai aimé",
+                "tu as aimé",
+                "il a aimé",
+                "nous avons aimé",
+                "vous avez aimé",
+                "ils ont aimé"
             ],
             "Imparfait": [
-                "j'aim ais",
-                "tu aim ais",
-                "il aim ait",
-                "nous aim ions",
-                "vous aim iez",
-                "ils aim aient"
+                "j'aimais",
+                "tu aimais",
+                "il aimait",
+                "nous aimions",
+                "vous aimiez",
+                "ils aimaient"
             ],
             "Plus-que-parfait": [
-                "j'avais aim é",
-                "tu avais aim é",
-                "il avait aim é",
-                "nous avions aim é",
-                "vous aviez aim é",
-                "ils avaient aim é"
+                "j'avais aimé",
+                "tu avais aimé",
+                "il avait aimé",
+                "nous avions aimé",
+                "vous aviez aimé",
+                "ils avaient aimé"
             ],
             "Passé simple": [
-                "j'aim ai",
-                "tu aim as",
-                "il aim a",
-                "nous aim âmes",
-                "vous aim âtes",
-                "ils aim èrent"
+                "j'aimai",
+                "tu aimas",
+                "il aima",
+                "nous aimâmes",
+                "vous aimâtes",
+                "ils aimèrent"
             ],
             "Passé antérieur": [
-                "j'eus aim é",
-                "tu eus aim é",
-                "il eut aim é",
-                "nous eûmes aim é",
-                "vous eûtes aim é",
-                "ils eurent aim é"
+                "j'eus aimé",
+                "tu eus aimé",
+                "il eut aimé",
+                "nous eûmes aimé",
+                "vous eûtes aimé",
+                "ils eurent aimé"
             ],
             "Futur simple": [
-                "j'aim erai",
-                "tu aim eras",
-                "il aim era",
-                "nous aim erons",
-                "vous aim erez",
-                "ils aim eront"
+                "j'aimerai",
+                "tu aimeras",
+                "il aimera",
+                "nous aimerons",
+                "vous aimerez",
+                "ils aimeront"
             ],
             "Futur antérieur": [
-                "j'aurai aim é",
-                "tu auras aim é",
-                "il aura aim é",
-                "nous aurons aim é",
-                "vous aurez aim é",
-                "ils auront aim é"
+                "j'aurai aimé",
+                "tu auras aimé",
+                "il aura aimé",
+                "nous aurons aimé",
+                "vous aurez aimé",
+                "ils auront aimé"
             ]
         },
         "Subjonctif": {
             "Présent": [
-                "que j'aim e",
-                "que tu aim es",
-                "qu'il aim e",
-                "que nous aim ions",
-                "que vous aim iez",
-                "qu'ils aim ent"
+                "que j'aime",
+                "que tu aimes",
+                "qu'il aime",
+                "que nous aimions",
+                "que vous aimiez",
+                "qu'ils aiment"
             ],
             "Passé": [
-                "que j'aie aim é",
-                "que tu aies aim é",
-                "qu'il ait aim é",
-                "que nous ayons aim é",
-                "que vous ayez aim é",
-                "qu'ils aient aim é"
+                "que j'aie aimé",
+                "que tu aies aimé",
+                "qu'il ait aimé",
+                "que nous ayons aimé",
+                "que vous ayez aimé",
+                "qu'ils aient aimé"
             ],
             "Imparfait": [
-                "que j'aim asse",
-                "que tu aim asses",
-                "qu'il aim ât",
-                "que nous aim assions",
-                "que vous aim assiez",
-                "qu'ils aim assent"
+                "que j'aimasse",
+                "que tu aimasses",
+                "qu'il aimât",
+                "que nous aimassions",
+                "que vous aimassiez",
+                "qu'ils aimassent"
             ],
             "Plus-que-parfait": [
-                "que j'eusse aim é",
-                "que tu eusses aim é",
-                "qu'il eût aim é",
-                "que nous eussions aim é",
-                "que vous eussiez aim é",
-                "qu'ils eussent aim é"
+                "que j'eusse aimé",
+                "que tu eusses aimé",
+                "qu'il eût aimé",
+                "que nous eussions aimé",
+                "que vous eussiez aimé",
+                "qu'ils eussent aimé"
             ]
         },
         "Conditionnel": {
             "Présent": [
-                "j'aim erais",
-                "tu aim erais",
-                "il aim erait",
-                "nous aim erions",
-                "vous aim eriez",
-                "ils aim eraient"
+                "j'aimerais",
+                "tu aimerais",
+                "il aimerait",
+                "nous aimerions",
+                "vous aimeriez",
+                "ils aimeraient"
             ],
             "Passé première forme": [
-                "j'aurais aim é",
-                "tu aurais aim é",
-                "il aurait aim é",
-                "nous aurions aim é",
-                "vous auriez aim é",
-                "ils auraient aim é"
+                "j'aurais aimé",
+                "tu aurais aimé",
+                "il aurait aimé",
+                "nous aurions aimé",
+                "vous auriez aimé",
+                "ils auraient aimé"
             ],
             "Passé deuxième forme": [
-                "j'eusse aim é",
-                "tu eusses aim é",
-                "il eût aim é",
-                "nous eussions aim é",
-                "vous eussiez aim é",
-                "ils eussent aim é"
+                "j'eusse aimé",
+                "tu eusses aimé",
+                "il eût aimé",
+                "nous eussions aimé",
+                "vous eussiez aimé",
+                "ils eussent aimé"
             ]
         },
         "Impératif": {
             "Présent": [
-                "aim e",
-                "aim ons",
-                "aim ez"
+                "aime",
+                "aimons",
+                "aimez"
             ],
             "Passé": [
-                "aie aim é",
-                "ayons aim é",
-                "ayez aim é"
+                "aie aimé",
+                "ayons aimé",
+                "ayez aimé"
             ]
         },
         "Participe": {
             "Présent": [
-                "aim ant"
+                "aimant"
             ],
             "Passé": [
-                "aim é",
-                "aim ée",
-                "aim és",
-                "aim ées",
-                "ayant aim é"
+                "aimé",
+                "aimée",
+                "aimés",
+                "aimées",
+                "ayant aimé"
             ]
         },
         "Infinitif": {
@@ -159,15 +159,15 @@ window.verbDaten = {
                 "aimer"
             ],
             "Passé": [
-                "avoir aim é"
+                "avoir aimé"
             ]
         },
         "Gérondif": {
             "Présent": [
-                "en aim ant"
+                "en aimant"
             ],
             "Passé": [
-                "en ayant aim é"
+                "en ayant aimé"
             ]
         },
         "Tournure de phrase avec le verbe aimer": {
