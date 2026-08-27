@@ -1,55 +1,75 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Französisch Verb-Konjugator</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <header>
-        <h1 id="verb-title">Französisch Verb-Konjugator</h1>
+      <h1 id="verb-title">Französisch Verb-Konjugator</h1>
     </header>
 
     <div class="toolbar">
-        <label for="verb-select">Verb wählen:</label>
-        <select id="verb-select" aria-label="Verb auswählen"></select>
+      <label for="verb-select">Verb wählen:</label>
+      <select id="verb-select" aria-label="Verb auswählen"></select>
     </div>
 
     <div class="quickstart" aria-label="Modus-Auswahl">
-        <label class="mode-label mode-alle"><input type="checkbox" data-mode="alle" checked> Alle</label>
-        <label class="mode-label mode-indicatif"><input type="checkbox" data-mode="Indicatif"> Indicatif</label>
-        <label class="mode-label mode-subjonctif"><input type="checkbox" data-mode="Subjonctif"> Subjonctif</label>
-        <label class="mode-label mode-conditionnel"><input type="checkbox" data-mode="Conditionnel"> Conditionnel</label>
-        <label class="mode-label mode-imperatif"><input type="checkbox" data-mode="Impératif"> Impératif</label>
-        <label class="mode-label mode-participe"><input type="checkbox" data-mode="Participe"> Participe</label>
+      <label class="mode-label mode-alle"
+        ><input type="checkbox" data-mode="alle" checked /> Alle</label
+      >
+      <label class="mode-label mode-indicatif"
+        ><input type="checkbox" data-mode="Indicatif" /> Indicatif</label
+      >
+      <label class="mode-label mode-subjonctif"
+        ><input type="checkbox" data-mode="Subjonctif" /> Subjonctif</label
+      >
+      <label class="mode-label mode-conditionnel"
+        ><input type="checkbox" data-mode="Conditionnel" /> Conditionnel</label
+      >
+      <label class="mode-label mode-imperatif"
+        ><input type="checkbox" data-mode="Impératif" /> Impératif</label
+      >
+      <label class="mode-label mode-participe"
+        ><input type="checkbox" data-mode="Participe" /> Participe</label
+      >
     </div>
-    <div class="subbuttons" id="tense-buttons" aria-label="Zeitform-Auswahl"></div>
+    <div
+      class="subbuttons"
+      id="tense-buttons"
+      aria-label="Zeitform-Auswahl"
+    ></div>
 
     <div id="error-msg"></div>
-    <div id="loading-indicator" class="info-card" style="display:none; text-align:center;">
-        <strong>Lädt…</strong>
-        <div>Die Konjugation wird geladen, bitte warten.</div>
+    <div
+      id="loading-indicator"
+      class="info-card"
+      style="display: none; text-align: center"
+    >
+      <strong>Lädt…</strong>
+      <div>Die Konjugation wird geladen, bitte warten.</div>
     </div>
 
     <div class="info-row">
-        <div class="info-card">
-            <strong>Infinitif</strong>
-            <div id="verb-infinitiv">–</div>
-        </div>
-        <div class="info-card">
-            <strong>Auxiliaire</strong>
-            <div id="verb-auxiliaire">–</div>
-        </div>
-        <div class="info-card">
-            <strong>Groupe</strong>
-            <div id="verb-groupe">–</div>
-        </div>
+      <div class="info-card">
+        <strong>Infinitif</strong>
+        <div id="verb-infinitiv">–</div>
+      </div>
+      <div class="info-card">
+        <strong>Auxiliaire</strong>
+        <div id="verb-auxiliaire">–</div>
+      </div>
+      <div class="info-card">
+        <strong>Groupe</strong>
+        <div id="verb-groupe">–</div>
+      </div>
     </div>
 
     <div class="grid" id="conjugation-grid"></div>
 
-    <script src="./js/verbs.js"></script>
-    <script src="./js/main.js"></script>
-</body>
+    <script src="./app/verbs.js"></script>
+    <script src="./app/main.js"></script>
+  </body>
 </html>
