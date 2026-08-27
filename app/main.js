@@ -542,6 +542,10 @@ function setLoading(isLoading) {
 }
 
 function setVerb(verbId) {
+  if (!verbId) {
+    showError("Kein Verb verfügbar.");
+    return;
+  }
   verbSelect.value = verbId;
   setLoading(true);
   loadVerbData(verbId)
@@ -556,7 +560,10 @@ function setVerb(verbId) {
 
 function initialize() {
   verbs.forEach((verb) => verbSelect.appendChild(createOption(verb)));
-  verbSelect.value = "etre";
+  const defaultVerb = verbs.some((verb) => verb.id === "etre")
+    ? "etre"
+    : verbs[0]?.id || "";
+  verbSelect.value = defaultVerb;
   verbSelect.addEventListener("change", () => {
     setVerb(verbSelect.value);
   });
