@@ -8,7 +8,38 @@
   </head>
   <body>
     <header>
-      <h1 id="verb-title">Französisch Verb-Konjugator</h1>
+      <div class="title-row">
+        <h1 id="verb-title">Französisch Verb-Konjugator</h1>
+        <div class="translation-tools" aria-label="Übersetzungen">
+          <button
+            class="translation-button"
+            type="button"
+            data-language="ar"
+            aria-label="AR Übersetzung"
+          >
+            <span aria-hidden="true">AR</span>
+            <span class="translation-popup" role="status"></span>
+          </button>
+          <button
+            class="translation-button"
+            type="button"
+            data-language="de"
+            aria-label="DE Übersetzung"
+          >
+            <span aria-hidden="true">DE</span>
+            <span class="translation-popup" role="status"></span>
+          </button>
+          <button
+            class="translation-button"
+            type="button"
+            data-language="en"
+            aria-label="EN Übersetzung"
+          >
+            <span aria-hidden="true">EN</span>
+            <span class="translation-popup" role="status"></span>
+          </button>
+        </div>
+      </div>
     </header>
 
     <div class="toolbar">
@@ -70,6 +101,7 @@
     <div class="grid" id="conjugation-grid"></div>
 
     <script src="./app/verbs.js"></script>
+    <script src="./app/translations.js"></script>
     <script src="./app/main.js"></script>
   </body>
 </html>

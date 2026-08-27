@@ -54,6 +54,17 @@ function normalizeVerbFilename(verbId) {
     .toLowerCase();
 }
 
+function updateTranslationPopups(verbId) {
+  const translation = window.verbTranslations?.[normalizeVerbFilename(verbId)];
+  document.querySelectorAll(".translation-button").forEach((button) => {
+    const popup = button.querySelector(".translation-popup");
+    const language = button.dataset.language;
+    popup.textContent =
+      translation?.[language] || "Keine Übersetzung verfügbar";
+    popup.dir = language === "ar" ? "rtl" : "ltr";
+  });
+}
+
 function loadVerbData(verbId) {
   const url = `./js/${normalizeVerbFilename(verbId)}.js`;
   errorMsg.style.display = "none";
@@ -559,6 +570,7 @@ function setVerb(verbId) {
     .then((data) => {
       setLoading(false);
       renderConjugation(data);
+      updateTranslationPopups(verbId);
       restoreModeCheckboxes();
       updateModeSelection();
     })
