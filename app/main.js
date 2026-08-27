@@ -47,8 +47,15 @@ function createOption(verb) {
   return option;
 }
 
+function normalizeVerbFilename(verbId) {
+  return verbId
+    .normalize("NFD")
+    .replace(/\p{Diacritic}/gu, "")
+    .toLowerCase();
+}
+
 function loadVerbData(verbId) {
-  const url = `./js/${verbId}.js`;
+  const url = `./js/${normalizeVerbFilename(verbId)}.js`;
   errorMsg.style.display = "none";
   grid.innerHTML = "";
   document.getElementById("verb-infinitiv").textContent = "Lade...";
